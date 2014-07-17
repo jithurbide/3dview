@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3DMain", "Template-OpenCV\Template-OpenCV.vcxproj", "{2BD9C4BA-F23D-48AA-9D30-BC33322DA6CF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3DLib", "3DLib\3DLib.vcxproj", "{592E7732-0D59-4255-B23C-8D6F45A39E34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BD9C4BA-F23D-48AA-9D30-BC33322DA6CF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2BD9C4BA-F23D-48AA-9D30-BC33322DA6CF}.Debug|Win32.Build.0 = Debug|Win32
+		{2BD9C4BA-F23D-48AA-9D30-BC33322DA6CF}.Release|Win32.ActiveCfg = Release|Win32
+		{2BD9C4BA-F23D-48AA-9D30-BC33322DA6CF}.Release|Win32.Build.0 = Release|Win32
+		{592E7732-0D59-4255-B23C-8D6F45A39E34}.Debug|Win32.ActiveCfg = Debug|Win32
+		{592E7732-0D59-4255-B23C-8D6F45A39E34}.Debug|Win32.Build.0 = Debug|Win32
+		{592E7732-0D59-4255-B23C-8D6F45A39E34}.Release|Win32.ActiveCfg = Release|Win32
+		{592E7732-0D59-4255-B23C-8D6F45A39E34}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
