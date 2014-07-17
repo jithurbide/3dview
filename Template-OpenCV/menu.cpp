@@ -4,14 +4,16 @@
 #include <Windows.h>
 #include "opencv2\core\core.hpp"
 #include "opencv2\highgui\highgui.hpp"
-
+#include "Lib3D.h"
 
 using namespace std;
 using namespace cv;
+using namespace Lib3D;
 
 Menu::Menu()
 {
 	MainAI();
+	dossier_ = "";
 }
 
 void Menu::ShowMainMenu()
@@ -284,7 +286,9 @@ void Menu::CalibAI()
 {
 	int retourClavierMain = 100;
 	int retourClavierSecond = 100;
-	std::string path;
+	StereoVideoToImage stereoVideo = StereoVideoToImage(dossier_);
+	
+	std::string chemin;
 	ShowCalibMenu();
 	while ( retourClavierMain != 9 )
 	{
@@ -306,17 +310,20 @@ void Menu::CalibAI()
 			case 1:
 				PathAI();
 				cout <<endl <<"                                    Nouveau chemin :  ";
-				while ( !( cin >> path ) )
+				while ( !( cin >> chemin ) )
 				{
 					string tmp;
 					cin.clear();
 					cin >> tmp;
 					ShowCalibMenuError();
 				}
-				dossier_ = path;
+				dossier_ = chemin;
 				// need add code
 				break;
 			case 2:
+				stereoVideo.Start();
+				ShowCalibMenu();
+				 stereoVideo.~StereoVideoToImage;
 				//start dual picture to save file
 				break;
 			case 3:

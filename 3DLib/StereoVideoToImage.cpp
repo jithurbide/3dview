@@ -5,11 +5,25 @@ using namespace std;
 using namespace Lib3D;
 using namespace cv;
 
+
+StereoVideoToImage::StereoVideoToImage()
+{
+	
+}
+StereoVideoToImage::~StereoVideoToImage()
+{
+	//delete path_;
+
+}
+StereoVideoToImage::StereoVideoToImage(string path)
+{
+	path_ = path;
+}
 void StereoVideoToImage::SaveToFile(int i)
 {
 	// Save the frame into a file
-	string left = "left";
-	string rigth = "rigth";
+	string left = path_+"\left";
+	string rigth = path_+"\right";
 	string ext = ".jpg";
 	left += std::to_string(i);
 	left += ext;
@@ -113,8 +127,8 @@ int StereoVideoToImage::Start()
 		if ( c == 27 ) break;
 	}
 
-
-
-	waitKey(0); // Wait for a keystroke in the window
+	LeftCAM.release();
+	RightCAM.release();
+	cvDestroyAllWindows();
 	return 0;
 }

@@ -9,24 +9,21 @@
 
 
 using namespace cv;
+using namespace std;
 
 namespace Lib3D {
 
-
-	class Calibration
-	{
-		// TODO: Add your methods for this class here.
-
-	};
-
 	class StereoVideoToImage
 	{
+	public:
 		Mat leftImg, rigthImg;
+		string path_;
 		void SaveToFile(int i);
 		static void mouseCallback(int event, int x, int y, int flags, void *param);
 		void doMouseCallback(int event, int x, int y, int flags);
 		int Start();
 		StereoVideoToImage();
+		StereoVideoToImage(string path);
 		~StereoVideoToImage();
 
 	};
